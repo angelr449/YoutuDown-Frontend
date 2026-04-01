@@ -1,0 +1,71 @@
+.navOption {
+    height: 80px;
+    background-color: var(--bg-secondary);
+    display: flex;
+
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+    box-shadow: 1px 0px 10px 0px #aaa;
+
+    gap: 15px;
+
+    #title{
+        margin-left: 10px;
+       
+        border-radius: 5px;
+
+
+    }
+
+    #buttons-language {
+        display: flex;
+        margin-left: auto;
+        background-color: #444;
+        border-radius: 5px;
+        height: 50px;
+        align-items: center;
+
+
+
+    }
+    
+    #buttons-theme{
+    display: flex;
+        margin-right: 20px;
+        background-color: #444;
+        border-radius: 5px;
+        height: 50px;
+        align-items: center;
+    }
+
+    button {
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+        outline: none;
+        
+
+        height: 40px;
+        margin: 0px 5px;
+        padding: 5px 10px;
+        
+        
+
+        border-radius: 5px;
+        
+
+
+
+        background-color: #036;
+    }
+
+
+
+
+}

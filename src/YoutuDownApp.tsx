@@ -1,8 +1,15 @@
+import { HeaderPage } from "./components/HeaderPage/HeaderPage"
+import { SearchBar } from "./components/SearchBar/SearchBar"
 
 
 
 export const YoutuDownApp = () => {
   return (
-    <div>YoutuDownApp</div>
+    <>
+    <HeaderPage/>
+
+    <SearchBar/>
+    
+    </>
   )
 }
