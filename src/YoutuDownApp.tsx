@@ -4,23 +4,26 @@ import { RenderVideo } from "./components/RederVideo/RenderVideo"
 import { SearchBar } from "./components/SearchBar/SearchBar"
 import { VideoFormats } from "./components/VideoFormats/VideoFormats"
 
+import {type VideoData} from "./data/infoVideo.data";
 
 
 export const YoutuDownApp = () => { 
 const [videoURL, setVideoURL] = useState('');
+const [infoVideo, setInfoVideo] = useState<VideoData | null>(null)
+console.log(infoVideo)
 
 const regex = /(?:youtube\.com.*(?:\?|&)v=|youtu\.be\/)([^&\n?#]+)/;
   const match = videoURL.match(regex);
   const videoId= match ? match[1] : null;
-  console.log(videoId)
+  
 
   return (
     <>
       <HeaderPage />
 
-      <SearchBar videoURL={videoURL} setVideoURL={setVideoURL}/>
+      <SearchBar videoURL={videoURL} setVideoURL={setVideoURL} setInfoVideo ={setInfoVideo}/>
       <RenderVideo videoId={videoId} />
-      <VideoFormats />
+      <VideoFormats infoVideo={infoVideo} videoURL={videoURL}/>
 
     </>
   )

@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
 import "./SearchBar.css"
 import { getInfoVideo } from '../../../helpers/getInfoVideo';
+import type { VideoData } from "../../data/infoVideo.data";
 
 
 type SearchBarProps = {
   videoURL: string
-  setVideoURL: React.Dispatch<React.SetStateAction<string>>
+  setVideoURL: React.Dispatch<React.SetStateAction<string>>,
+  setInfoVideo: React.Dispatch<React.SetStateAction<VideoData|null>>
 }
 
-export const SearchBar = ({ videoURL, setVideoURL }: SearchBarProps) => {
+export const SearchBar = ({ videoURL, setVideoURL, setInfoVideo }: SearchBarProps) => {
 
   const [inputValue, setInputValue] = useState('');
-  // const [videoURL, setVideoURL] = useState('');
+  
 
   
 
@@ -40,12 +42,13 @@ export const SearchBar = ({ videoURL, setVideoURL }: SearchBarProps) => {
     
     const fetchVideoInfo = async () => {
       const infoVideo = await getInfoVideo(videoURL);
-      console.log({ infoVideo });
+      setInfoVideo(infoVideo)
+      
     };
 
     fetchVideoInfo();
 
-  }, [videoURL]);
+  }, [videoURL, setInfoVideo]);
 
 
 

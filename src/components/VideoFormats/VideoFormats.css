@@ -1,11 +1,9 @@
-
-
-.video-grid{
+.video-grid {
     width: 80%;
     margin: 50px auto;
     min-width: 500px;
-    
-    
+
+
 
 
     display: grid;
@@ -18,17 +16,60 @@
 }
 
 
-.video-card{
-border: 2px solid #fff;
-border-radius: 10px;
+.video-card {
+    border: 2px solid #fff;
+    border-radius: 10px;
 
-padding: 20px;
-text-align: center;
-transition: all 0.2s;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.2s;
 }
-.video-card:hover{
+
+.video-card:hover {
     border: 2px solid #048;
     color: #aaa;
 
+
+}
+.video-card-click{
+    border: 2px solid #048;
+    color: #aaa;
+    background-color: #00102050;
+}
+
+#btn-download {
+
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
     
+    display: block;
+    height: 50px;
+    width: 80%;
+    min-width: 100px;
+    margin: 20px auto;
+    padding: 5px 10px;
+
+
+
+    border-radius: 10px;
+    border: 2px solid inherit;
+
+
+
+
+    background-color: #036;
+
+    transition: all 0.1s;
+
+
+    &:hover {
+        border-radius: 7px;
+        border: 2px solid #f2f2f2;
+    }
 }
