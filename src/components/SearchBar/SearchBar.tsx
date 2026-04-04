@@ -55,7 +55,7 @@ export const SearchBar = ({ videoURL, setVideoURL, setInfoVideo }: SearchBarProp
   return (
     <div id="search-bar">
 
-      <input type="text" placeholder="what do you want to download?"
+      <input type="text" placeholder="¿Qué gustas descargar?"
         onChange={(e) => setInputValue(e.target.value)}
       />
 
