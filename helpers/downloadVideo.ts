@@ -3,7 +3,8 @@ import axios from "axios";
 
 export const downloadVideo = async(videoURL:string , formatId:string) => {
 
-  const response = await axios.get('http://localhost:8080/api/youtuDown/download-stream',{
+  try {
+      const response = await axios.get(`${import.meta.env.VITE_SERVER_API }/download-stream`,{
     params:{
 
       url: videoURL,
@@ -12,6 +13,14 @@ export const downloadVideo = async(videoURL:string , formatId:string) => {
     responseType: 'blob'
   })
   return response.data;
+  } catch (error) {
+    alert(`Sentimos la molestias, por favor intente mas tarde`)
+    console.log(error)
+    return null;
+    
+  }
+
+
 }
 
 

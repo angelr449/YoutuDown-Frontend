@@ -10,7 +10,7 @@ import {type VideoData} from "./data/infoVideo.data";
 export const YoutuDownApp = () => { 
 const [videoURL, setVideoURL] = useState('');
 const [infoVideo, setInfoVideo] = useState<VideoData | null>(null)
-console.log(infoVideo)
+
 
 const regex = /(?:youtube\.com.*(?:\?|&)v=|youtu\.be\/)([^&\n?#]+)/;
   const match = videoURL.match(regex);

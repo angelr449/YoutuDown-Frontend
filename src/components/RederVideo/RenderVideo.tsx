@@ -4,7 +4,7 @@ type VideoIdProps = {
 }
 export const RenderVideo = ({videoId}: VideoIdProps) => {
 
-    console.log(videoId)
+    
     return (
         <div id="box-video">
             <iframe

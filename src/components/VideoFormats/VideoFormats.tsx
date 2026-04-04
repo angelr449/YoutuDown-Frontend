@@ -21,7 +21,7 @@ export const VideoFormats = ({ videoURL, infoVideo }: InfoVideoProps) => {
     const handleCardOption = (format: VideoFormat) => {
         setDownloadId(format.id);
 
-        console.log(format)
+        
 
     }
 

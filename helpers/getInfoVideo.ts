@@ -6,7 +6,7 @@ import axios from "axios";
 export const getInfoVideo = async (URL: string) => {
   try {
     const response = await axios.get(
-      "http://localhost:8080/api/youtuDown/info",
+      `${import.meta.env.VITE_SERVER_API }/info`,
       {
         params: {
           url: URL
@@ -17,6 +17,7 @@ export const getInfoVideo = async (URL: string) => {
     return response.data;
 
   } catch (err) {
+    alert(`Sentimos la molestias, por favor intente mas tarde`);
     console.error(err);
     return null;
   }
