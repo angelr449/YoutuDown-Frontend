@@ -46,6 +46,8 @@ export const VideoFormats = ({ videoURL, infoVideo }: InfoVideoProps) => {
 
     }
 
+
+
     return (
 
         <div>
@@ -58,8 +60,12 @@ export const VideoFormats = ({ videoURL, infoVideo }: InfoVideoProps) => {
                             onClick={() => handleCardOption(format)}
 
                         >
-                            <h3>ID:{format.id}</h3>
-                            <h4>{`${format.quality} - ${format.filesize}mb - ${format.ext}`}</h4>
+                            <h3>
+                                {`${format.quality} - ${format.filesize ? (format.filesize / (1024 * 1024)).toFixed(2) + " MB" : "Unknown size"
+                                    } - ${format.ext}`}
+                            </h3>
+                            <h4>ID:{format.id}</h4>
+
                             <h4>Sonido: {format.hasAudio ? 'si' : 'no'}</h4>
                             <h4>Video: {format.hasVideo ? 'si' : 'no'}</h4>
 

@@ -1,0 +1,107 @@
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+
+
+    height: 40px;
+    margin: 0px 5px;
+    padding: 5px 10px;
+
+
+
+    border-radius: 5px;
+
+
+
+
+    background-color: var(--bg-button-secondary);
+    color: var(--border-color);
+}
+
+
+#settings-btn {
+    
+    
+
+    width: 40px;
+    /* height: 40px; */
+    padding: 0px;
+    margin-right: 20px;
+
+    border-radius: 15px;
+    border: 1px solid inherit;
+    text-align: center;
+    align-content: center;
+    justify-items: center;
+
+    transition: all 0.2s;
+
+
+}
+
+#settings-btn:hover {
+    border-radius: 20px;
+    border: 1px solid var(--bg-border-primary);
+
+}
+
+#settings-page-box {
+    position: absolute;
+    top: 12%;
+    right: 20px;
+    width: 250px;
+    /* height: 200px; */
+    height: 120px;
+    background-color: var(--bg-primary);
+    box-shadow: -2px 2px 5px 5px var(--bg-shadow);
+    border-radius: 5px;
+    /* border: 1px solid #555; */
+    h5{
+        font-size: 12px;
+    }
+
+}
+
+
+
+#buttons-language {
+    display: flex;
+    /* margin-left: auto; */
+    background-color: var(--bg-button-primary);
+    border-radius: 5px;
+    height: 50px;
+    width: 200px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-right: auto;
+    padding: 10px;
+
+    align-items: center;
+    justify-content: space-between;
+
+
+
+}
+
+#buttons-theme {
+    display: flex;
+    margin: 20px 10px;
+    margin-right: auto;
+
+    padding: 10px;
+    /* margin-right: 10px; */
+    background-color: var(--bg-button-primary);
+    border-radius: 5px;
+    height: 50px;
+    width: 230px;
+
+
+    align-items: center;
+    justify-content: space-between;
+}
