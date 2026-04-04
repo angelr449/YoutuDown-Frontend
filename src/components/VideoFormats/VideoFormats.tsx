@@ -12,6 +12,7 @@ export const VideoFormats = ({ videoURL, infoVideo }: InfoVideoProps) => {
     // console.log(`chequeo antes de hacer cartas, `, infoVideo?.formats)
 
     const [downloadId, setDownloadId] = useState('');
+    const [isLoading, setIsLoading] = useState(false)
 
     if (!infoVideo) return null;
 
@@ -26,7 +27,7 @@ export const VideoFormats = ({ videoURL, infoVideo }: InfoVideoProps) => {
     }
 
     const handleDownloadOption = async () => {
-
+        setIsLoading(true)
         const blob = await downloadVideo(videoURL, downloadId);
 
         const url = window.URL.createObjectURL(blob);
@@ -40,6 +41,7 @@ export const VideoFormats = ({ videoURL, infoVideo }: InfoVideoProps) => {
 
         a.remove();
         window.URL.revokeObjectURL(url);
+        setIsLoading(false)
 
 
 
@@ -84,7 +86,9 @@ export const VideoFormats = ({ videoURL, infoVideo }: InfoVideoProps) => {
             </div>
             <button id='btn-download'
                 onClick={handleDownloadOption}>
-                Descargar
+
+                    {isLoading? `Descargando...`: `Descargar`}
+                
             </button>
 
         </div>
